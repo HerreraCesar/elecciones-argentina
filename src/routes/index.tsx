@@ -1,21 +1,16 @@
-import './index.css';
-
-import { A } from 'solid-start';
-import Counter from '~/components/Counter';
+import { Text } from "solid-i18n";
+import styles from "./index.module.scss";
 
 export default function Home() {
   return (
     <main>
-      <h1>Hello world!</h1>
-      <Counter />
-      <p>
-        Visit{' '}
-        <a href="https://solidjs.com" target="_blank">
-          solidjs.com
-        </a>{' '}
-        to learn how to build Solid apps.
-        <A href="/timeline">Go to timeline</A>
-      </p>
+      <div class={styles.background}>
+        <div class={styles.card}>
+          <h1 class={styles.title}>
+            <Text message="coming_soon" />
+          </h1>
+        </div>
+      </div>
     </main>
   );
 }

@@ -1,0 +1,25 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./background.webp");
+  @include flex(column, center, center, initial);
+}
+
+.title {
+  @include text(2rem, 700);
+  color: $primary;
+  font-style: italic;
+}
+
+.card {
+  @include size();
+  @include flex(column, center, center, 0);
+  backdrop-filter: blur($blur);
+  z-index: 5;
+}

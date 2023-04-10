@@ -1,17 +1,9 @@
-import { A } from 'solid-start';
+import styles from "./index.module.scss";
 
 export default function Timeline() {
   return (
     <main>
-      <h1>Timeline</h1>
-      <p>
-        Visit{' '}
-        <a href="https://solidjs.com" target="_blank">
-          solidjs.com
-        </a>{' '}
-        to learn how to build Solid apps.
-      </p>
-      <A href="./test">test</A>
+      <p>Hi</p>
     </main>
   );
 }
