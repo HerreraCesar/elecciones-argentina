@@ -1,12 +1,10 @@
-import { I18nLocales } from "i18n-mini/lib/types";
-
-const home: I18nLocales = {
+const home = {
   coming_soon: "Sitio en construcción",
 };
 
-const timeline: I18nLocales = {};
+const timeline = {};
 
-const es: I18nLocales = {
+const es = {
   ...home,
   ...timeline,
 };
