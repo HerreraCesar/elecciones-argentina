@@ -1,7 +1,8 @@
 @import "mixins";
 
 // GLOBALS
-:root {
+
+html {
   // COLORS
   --primary: #ff0100;
   --secondary: #d40100;
@@ -19,15 +20,16 @@
   --blur: 5px;
 
   // TYPOGRAPHIES
-  --font: "Montserrat", sans-serif;
+  --font: "Lato", sans-serif;
 
   // MEASURES
   --page-width: 80vw;
-  --navbar-height: 8rem;
+  --header-height: 50px;
+  --header-width: 500 px;
 }
 
 .light-mode {
-  --background: var(--light);
+  --background-color: var(--light);
   --scrollbar: var(--primary) var(--dark);
   --selection: var(--dark);
   --selection-background: var(--primary);
@@ -49,7 +51,7 @@
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: var(--scrollbar);
-  transition: color .3s ease-in-out, background-color .3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 *::-webkit-scrollbar {
@@ -84,7 +86,8 @@ h5,
 h6,
 span,
 p,
-a {
+a,
+li {
   color: var(--text);
   font-family: var(--font);
   font-weight: 500;

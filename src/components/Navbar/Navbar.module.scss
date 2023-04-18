@@ -1,0 +1,28 @@
+@import "../../mixins.scss";
+
+.header {
+  height: var(--header-height);
+  width: var(--header-width);
+  display: grid;
+  grid-template-areas: "logo navbar buttons";
+  grid-template-columns: 1fr 2fr 1fr;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.navbar {
+  grid-area: navbar;
+  ul {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.buttons {
+  grid-area: buttons;
+}

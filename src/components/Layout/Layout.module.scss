@@ -1,0 +1,10 @@
+@import "../../mixins.scss";
+
+.layout {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
