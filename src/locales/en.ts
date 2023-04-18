@@ -1,10 +1,12 @@
+import { language } from '~/interfaces/language';
+
 const home = {
-  coming_soon: "Site under construction",
+  coming_soon: 'Site under construction',
 };
 
 const timeline = {};
 
-const en = {
+const en: language = {
   ...home,
   ...timeline,
 };

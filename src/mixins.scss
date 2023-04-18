@@ -1,5 +1,3 @@
-@import "variables";
-
 @mixin flex($direction: initial, $justify: initial, $align: initial, $gap: 0) {
   display: flex;
   flex-flow: $direction nowrap;

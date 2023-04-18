@@ -1,9 +1,6 @@
 lockfileVersion: '6.0'
 
 devDependencies:
-  '@mbarzda/solid-i18next':
-    specifier: ^1.2.2
-    version: 1.2.2(i18next@22.4.14)(solid-js@1.7.3)
   '@solidjs/meta':
     specifier: ^0.28.2
     version: 0.28.4(solid-js@1.7.3)
@@ -25,9 +22,6 @@ devDependencies:
   '@vitest/ui':
     specifier: ^0.26.3
     version: 0.26.3
-  i18next:
-    specifier: ^22.4.14
-    version: 22.4.14
   jsdom:
     specifier: ^20.0.3
     version: 20.0.3
@@ -2032,20 +2026,6 @@ packages:
     transitivePeerDependencies:
       - encoding
       - supports-color
-    dev: true
-
-  /@mbarzda/solid-i18next@1.2.2(i18next@22.4.14)(solid-js@1.7.3):
-    resolution: {integrity: sha512-qXXFcBKnR8F91yexj1WfYiwCW6Y39mWZt/g79FDbxEvQwxhxdIrGCLLY0+YLNdQVrQ0M6bNJ1v6yOE828mRvUA==}
-    peerDependencies:
-      html-parse-string: <=1.x
-      i18next: '>=22.x'
-      solid-js: '>=1.6.x'
-    peerDependenciesMeta:
-      html-parse-string:
-        optional: true
-    dependencies:
-      i18next: 22.4.14
-      solid-js: 1.7.3
     dev: true
 
   /@nodelib/fs.scandir@2.1.5:
@@ -5030,12 +5010,6 @@ packages:
   /human-signals@2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
-    dev: true
-
-  /i18next@22.4.14:
-    resolution: {integrity: sha512-VtLPtbdwGn0+DAeE00YkiKKXadkwg+rBUV+0v8v0ikEjwdiJ0gmYChVE4GIa9HXymY6wKapkL93vGT7xpq6aTw==}
-    dependencies:
-      '@babel/runtime': 7.21.0
     dev: true
 
   /iconv-lite@0.4.24:

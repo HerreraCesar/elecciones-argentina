@@ -1,4 +1,3 @@
-@import "../variables.scss";
 @import "../mixins.scss";
 
 .background {
@@ -13,13 +12,13 @@
 
 .title {
   @include text(2rem, 700);
-  color: $primary;
+  color: var(--text);
   font-style: italic;
 }
 
 .card {
   @include size();
   @include flex(column, center, center, 0);
-  backdrop-filter: blur($blur);
+  backdrop-filter: blur(var(--blur));
   z-index: 5;
 }

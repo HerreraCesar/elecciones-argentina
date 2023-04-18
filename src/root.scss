@@ -1,0 +1,96 @@
+@import "mixins";
+
+// GLOBALS
+:root {
+  // COLORS
+  --primary: #ff0100;
+  --secondary: #d40100;
+  --light: #ffffff;
+  --dark: #171717;
+  --placeholder: #d4d4d4;
+  --shadow: #3a1010e8;
+  --glass: rgba(255, 255, 255, 0.03);
+  --border: rgb(255, 255, 255, 0.2);
+
+  //  EDGES
+  --curve: 10px;
+
+  // EFFECTS
+  --blur: 5px;
+
+  // TYPOGRAPHIES
+  --font: "Montserrat", sans-serif;
+
+  // MEASURES
+  --page-width: 80vw;
+  --navbar-height: 8rem;
+}
+
+.light-mode {
+  --background: var(--light);
+  --scrollbar: var(--primary) var(--dark);
+  --selection: var(--dark);
+  --selection-background: var(--primary);
+  --text: var(--dark);
+}
+
+.dark-mode {
+  --background: var(--dark);
+  --scrollbar: var(--dark) var(--primary);
+  --selection: var(--primary);
+  --selection-background: var(--dark);
+  --text: var(--light);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar);
+  transition: color .3s ease-in-out, background-color .3s ease-in-out;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--dark);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 20px;
+  border: 3px solid transparent;
+}
+
+*::selection {
+  background-color: var(--selection-background);
+  color: var(--selection);
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+a {
+  color: var(--text);
+  font-family: var(--font);
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  text-align: start;
+  text-decoration: none;
+  list-style: none;
+}
