@@ -2,16 +2,17 @@
 
 // GLOBALS
 
-html {
+:root {
   // COLORS
-  --primary: #ff0100;
-  --secondary: #d40100;
+  --primary: #253C59;
+  --secondary: #58788C;
+  --tertiary: #99B4BF;
   --light: #ffffff;
-  --dark: #171717;
+  --dark: #19191a;
   --placeholder: #d4d4d4;
-  --shadow: #3a1010e8;
-  --glass: rgba(255, 255, 255, 0.03);
-  --border: rgb(255, 255, 255, 0.2);
+  --shadow: #10173ae8;
+  --glass: #ffffff08;
+  --border: #ffffff33;
 
   //  EDGES
   --curve: 10px;
@@ -25,7 +26,7 @@ html {
   // MEASURES
   --page-width: 80vw;
   --header-height: 50px;
-  --header-width: 500 px;
+  --header-width: 500px;
 }
 
 .light-mode {
@@ -37,7 +38,7 @@ html {
 }
 
 .dark-mode {
-  --background: var(--dark);
+  --background-color: var(--dark);
   --scrollbar: var(--dark) var(--primary);
   --selection: var(--primary);
   --selection-background: var(--dark);
@@ -75,7 +76,6 @@ html {
 
 body {
   overflow-x: hidden;
-  background-color: var(--background);
 }
 
 h1,
