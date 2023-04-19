@@ -8,7 +8,7 @@
 }
 
 .background {
-    background-color: black;
+    background-color: var(--background-color);
     width: 100vw;
     height: 100vh;
     z-index: 98;
@@ -28,9 +28,8 @@
     top: -100px;
     left: calc(50vw - 50px);
     animation: dance 4s backwards infinite;
-    animation-delay: 1s;
     transform: rotate(0);
-    box-shadow: 0rem 0rem 0.1rem var(--secondary), 0rem 0rem 1rem var(--primary), 0 0 30rem blue;
+    box-shadow: 0rem 0rem 30rem var(--primary);
 }
 
 @keyframes dance {
@@ -56,5 +55,11 @@
         top: calc(50vh - 50px);
         left: calc(50vw - 50px);
         transform: rotate(360deg) scale(10);
+    }
+}
+
+@media screen and (max-aspect-ratio: 10/8) {
+    .loader {
+        box-shadow: none;
     }
 }

@@ -97,3 +97,14 @@ li {
   text-decoration: none;
   list-style: none;
 }
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+}
+
+button:hover {
+  color: var(--tertiary);
+}

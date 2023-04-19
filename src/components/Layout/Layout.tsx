@@ -1,6 +1,8 @@
 import Footer from '../Footer/Footer';
 import { JSXElement } from 'solid-js';
 import Navbar from '../Navbar/Navbar';
+import Sidebar from '../Sidebar/Sidebar';
+import ToTop from '../ToTop/ToTop';
 import { Toaster } from 'solid-toast';
 import styles from './Layout.module.scss';
 import { useApplicationContext } from '~/context/context';
@@ -20,6 +22,8 @@ export default function Layout({ children }: SectionProps) {
       }`}
     >
       <Navbar />
+      <ToTop />
+      <Sidebar />
       <main class={styles.main}>{children}</main>
       <Footer />
       <Toaster position="bottom-center" />
