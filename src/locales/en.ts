@@ -3,6 +3,7 @@ import { language } from "~/interfaces/language";
 const navbar = {
   home: "Home",
   timeline: "Timeline",
+  logo: "Argentine Elections",
 };
 
 const home = {

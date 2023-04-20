@@ -2,7 +2,8 @@ import { language } from "~/interfaces/language";
 
 const navbar = {
   home: "Inicio",
-  timeline: "Línea de tiempo",
+  timeline: "Cronograma",
+  logo: "Elecciones Argentina",
 };
 
 const home = {

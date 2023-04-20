@@ -4,9 +4,9 @@
 
 :root {
   // COLORS
-  --primary: #253C59;
-  --secondary: #58788C;
-  --tertiary: #99B4BF;
+  --primary: #253c59;
+  --secondary: #58788c;
+  --tertiary: #99b4bf;
   --light: #ffffff;
   --dark: #19191a;
   --placeholder: #d4d4d4;
@@ -15,10 +15,10 @@
   --border: #ffffff33;
 
   //  EDGES
-  --curve: 10px;
+  --curve: 8px;
 
   // EFFECTS
-  --blur: 5px;
+  --blur: 6px;
 
   // TYPOGRAPHIES
   --font: "Lato", sans-serif;
@@ -26,7 +26,7 @@
   // MEASURES
   --page-width: 80vw;
   --header-height: 50px;
-  --header-width: 500px;
+  --header-width: 600px;
 }
 
 .light-mode {
@@ -35,6 +35,8 @@
   --selection: var(--dark);
   --selection-background: var(--primary);
   --text: var(--dark);
+  --box-shadow: var(--tertiary);
+  --logo: var(--primary);
 }
 
 .dark-mode {
@@ -43,6 +45,8 @@
   --selection: var(--primary);
   --selection-background: var(--dark);
   --text: var(--light);
+  --box-shadow: var(--primary);
+  --logo: var(--tertiary);
 }
 
 * {

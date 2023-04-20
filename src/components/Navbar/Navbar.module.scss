@@ -1,28 +1,239 @@
 @import "../../mixins.scss";
 
 .header {
+  margin-top: 10px;
   height: var(--header-height);
-  width: var(--header-width);
-  display: grid;
-  grid-template-areas: "logo navbar buttons";
-  grid-template-columns: 1fr 2fr 1fr;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
   position: fixed;
+  gap: 50px;
   top: 0;
   z-index: 100;
-}
-
-.logo {
-  grid-area: logo;
+  border-radius: 20px;
+  box-shadow: inset 0 0 50px var(--box-shadow);
+  border: 1px solid var(--text);
+  backdrop-filter: blur(var(--blur));
 }
 
 .navbar {
-  grid-area: navbar;
   ul {
     display: flex;
-    gap: 10px;
+    gap: 20px;
   }
 }
 
-.buttons {
-  grid-area: buttons;
+.link {
+  /* text-transform: uppercase; */
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.active {
+  color: var(--logo);
+  font-weight: 600;
+}
+
+.button {
+  background-color: var(--text);
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  path {
+    color: var(--background-color);
+  }
+}
+
+.menu {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  background-color: red;
+  border-radius: 20px;
+  z-index: -1;
+  animation: open 1s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+.square {
+  margin-top: 100px;
+  position: relative;
+}
+
+.one {
+  top: 0;
+  position: absolute;
+  background: white;
+  border-radius: 20px 0 0 0;
+  width: 13px;
+  height: 13px;
+  animation-play-state: paused;
+  animation: one 3s ease forwards;
+}
+.two {
+  top: 0;
+  position: absolute;
+  background: white;
+  left: 13px;
+  width: 1px;
+  height: 13px;
+  animation-play-state: paused;
+  animation: two 3s ease forwards;
+}
+.three {
+  top: 0;
+  position: absolute;
+  background: white;
+  border-radius: 0 20px 0 0;
+  left: 14px;
+  animation-play-state: paused;
+  width: 13px;
+  height: 13px;
+  animation: three 3s ease forwards;
+}
+.four {
+  position: absolute;
+  background: white;
+  left: 0;
+  top: 13px;
+  width: 13px;
+  height: 1px;
+  animation-play-state: paused;
+  animation: four 3s ease forwards;
+}
+.five {
+  position: absolute;
+  background: white;
+  left: 13px;
+  top: 13px;
+  width: 1px;
+  height: 1px;
+  animation-play-state: paused;
+  animation: five 3s ease forwards;
+}
+.six {
+  position: absolute;
+  background: white;
+  left: 14px;
+  top: 13px;
+  width: 13px;
+  height: 1px;
+  animation-play-state: paused;
+  animation: six 3s ease forwards;
+}
+.seven {
+  top: 14px;
+  position: absolute;
+  background: white;
+  border-radius: 0 0 0 20px;
+  width: 13px;
+  height: 13px;
+  animation-play-state: paused;
+  animation: seven 3s ease forwards;
+}
+.eight {
+  top: 14px;
+  position: absolute;
+  background: white;
+  left: 13px;
+  width: 1px;
+  height: 13px;
+  animation-play-state: paused;
+  animation: eight 3s ease forwards;
+}
+.nine {
+  top: 14px;
+  position: absolute;
+  background: white;
+  border-radius: 0 0 20px 0;
+  left: 14px;
+  animation-play-state: paused;
+  width: 13px;
+  height: 13px;
+  animation: nine 3s ease forwards;
+}
+
+@keyframes one {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(-150px) translateY(-50px);
+  }
+}
+
+@keyframes two {
+  0% {
+    transform: translateX(0) translateY(0) scaleX(0);
+  }
+  100% {
+    transform: translateX(-100px) translateY(-50px) scaleX(100);
+  }
+}
+
+@keyframes three {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(-50px) translateY(-50px);
+  }
+}
+
+@keyframes four {
+  0% {
+    transform: translateX(0) translateY(0) scaleY(0);
+  }
+  100% {
+    transform: translateX(-150px) translateY(0) scaleY(100);
+  }
+}
+
+@keyframes five {
+  0% {
+    transform: translateX(0) translateY(0) scaleY(0) scaleX(0);
+  }
+  100% {
+    transform: translateX(-100px) translateY(0) scaleY(100) scaleX(100);
+  }
+}
+
+@keyframes six {
+  0% {
+    transform: translateX(0) translateY(0) scaleY(0);
+  }
+  100% {
+    transform: translateX(-50px) translateY(0) scaleY(100);
+  }
+}
+
+@keyframes seven {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(-150px) translateY(50px);
+  }
+}
+
+@keyframes eight {
+  0% {
+    transform: translateX(0) translateY(0) scaleX(0);
+  }
+  100% {
+    transform: translateX(-100px) translateY(50px) scaleX(100);
+  }
+}
+
+@keyframes nine {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(-50px) translateY(50px);
+  }
 }
