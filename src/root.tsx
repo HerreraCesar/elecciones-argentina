@@ -35,7 +35,7 @@ export default function Root() {
         />
       </Head>
       <ApplicationProvider>
-        <Body>
+        <Body id="body">
           <Suspense>
             <ErrorBoundary>
               <Routes>

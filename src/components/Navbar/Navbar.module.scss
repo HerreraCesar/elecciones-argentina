@@ -1,7 +1,7 @@
 @import "../../mixins.scss";
 
 .header {
-  width: 400px;
+  width: var(--measures-header-width);
   margin-top: 10px;
   height: var(--measures-header-height);
   display: flex;
@@ -12,10 +12,9 @@
   gap: 50px;
   top: 0;
   z-index: 100;
-  border-radius: 20px;
-  box-shadow: inset 0 0 50px var(--colors-neutral-800);
-  border: 1px solid var(--colors-neutral-900);
-  backdrop-filter: blur(var(--effects-blur-500));
+  background-color: var(--colors-neutral-100);
+  border-radius: var(--edges-curvature-200);
+  box-shadow: 0px 0px 4px #17202a5a;
 }
 
 .navbar {
@@ -37,7 +36,7 @@
 
 .button {
   position: relative;
-  background-color: var(--colors-neutral-600);
+  background-color: var(--colors-neutral-300);
   padding: 6px;
   border-radius: 50%;
   display: flex;
@@ -67,7 +66,6 @@
   width: 28px;
   height: 28px;
 
-
   svg {
     transform: rotate(135deg);
     transition: all 0.3s ease-in-out;
@@ -86,7 +84,8 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: var(--colors-neutral-700);
+  background-color: var(--colors-neutral-200);
+  opacity: 80%;
   z-index: 10;
 }
 
@@ -99,7 +98,7 @@
   position: absolute;
   width: 28px;
   height: 28px;
-  background-color: var(--colors-neutral-700);
+  background-color: var(--colors-neutral-300);
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
   z-index: -1;
@@ -112,15 +111,14 @@
 .open_menu {
   opacity: 1;
   position: fixed;
-  width: 400px;
+  width: var(--measures-header-width);
   height: 300px;
-  background-color: var(--colors-neutral-800);
-  box-shadow: 0 0 1rem var(--colors-neutral-900);
-  border-radius: 20px;
+  background-color: var(--colors-neutral-100);
+  box-shadow: 0px 0px 4px #17202a5a;
+  border-radius: var(--edges-curvature-200);
   transition: all 0.3s ease-in-out;
   z-index: 10;
   transform: translateX(-155px) translateY(180px);
-  border: 1px solid var(--text);
 
   .card {
     display: block;

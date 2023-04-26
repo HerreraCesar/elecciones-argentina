@@ -1,65 +1,65 @@
 .container {
-    width: 100vw;
-    height: 100vh;
-    z-index: 100;
-    position: absolute;
-    top: 0;
-    left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .background {
-    background-color: var(--colors-neutral-100);
-    width: 100vw;
-    height: 100vh;
-    z-index: 98;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
+  background-color: var(--colors-neutral-100);
+  width: 100vw;
+  height: 100vh;
+  z-index: 98;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
 
 .loader {
-    border-radius: 30%;
-    z-index: 99;
-    width: 100px;
-    height: 100px;
-    background-color: var(--colors-neutral-800);
-    position: absolute;
-    top: -100px;
-    left: calc(50vw - 50px);
-    animation: dance 4s backwards infinite;
-    transform: rotate(0);
-    box-shadow: 0rem 0rem 30rem var(--colors-neutral-100);
+  border-radius: 30%;
+  z-index: 99;
+  width: 100px;
+  height: 100px;
+  background-color: var(--colors-neutral-800);
+  position: absolute;
+  top: -100px;
+  left: calc(50vw - 50px);
+  animation: dance 4s backwards infinite;
+  transform: rotate(0);
+  box-shadow: 0rem 0rem 30rem var(--colors-neutral-100);
 }
 
 @keyframes dance {
-    0% {
-        top: -100px;
-        left: calc(50vw - 50px);
-        transform: rotate(0);
-    }
+  0% {
+    top: -100px;
+    left: calc(50vw - 50px);
+    transform: rotate(0);
+  }
 
-    35% {
-        top: calc(50vh - 55px);
-        left: calc(50vw - 50px);
-        transform: rotate(175deg);
-    }
+  35% {
+    top: calc(50vh - 55px);
+    left: calc(50vw - 50px);
+    transform: rotate(175deg);
+  }
 
-    40% {
-        top: calc(50vh - 50px);
-        left: calc(50vw - 50px);
-        transform: rotate(180deg);
-    }
+  40% {
+    top: calc(50vh - 50px);
+    left: calc(50vw - 50px);
+    transform: rotate(180deg);
+  }
 
-    80% {
-        top: calc(50vh - 50px);
-        left: calc(50vw - 50px);
-        transform: rotate(360deg) scale(10);
-    }
+  80% {
+    top: calc(50vh - 50px);
+    left: calc(50vw - 50px);
+    transform: rotate(360deg) scale(10);
+  }
 }
 
 @media screen and (max-aspect-ratio: 10/8) {
-    .loader {
-        box-shadow: none;
-    }
+  .loader {
+    box-shadow: none;
+  }
 }

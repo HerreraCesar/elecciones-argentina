@@ -4,26 +4,26 @@
 
 :root {
   // COLORS
-  --colors-neutral-100: #EAECEE;
-  --colors-neutral-200: #D5D8DC;
-  --colors-neutral-400: #808B96;
-  --colors-neutral-300: #ABB2B9;
+  --colors-neutral-100: #eaecee;
+  --colors-neutral-200: #d5d8dc;
+  --colors-neutral-400: #808b96;
+  --colors-neutral-300: #abb2b9;
   --colors-neutral-500: #566573;
-  --colors-neutral-600: #2C3E50;
+  --colors-neutral-600: #2c3e50;
   --colors-neutral-700: #273746;
-  --colors-neutral-800: #1C2833;
-  --colors-neutral-900: #17202A;
+  --colors-neutral-800: #1c2833;
+  --colors-neutral-900: #17202a;
 
   //  EDGES
-  --edges-curvature-100: 1%;
-  --edges-curvature-200: 2%;
-  --edges-curvature-300: 3%;
-  --edges-curvature-400: 4%;
-  --edges-curvature-500: 5%;
-  --edges-curvature-600: 6%;
-  --edges-curvature-700: 7%;
-  --edges-curvature-800: 8%;
-  --edges-curvature-900: 9%;
+  --edges-curvature-100: 10px;
+  --edges-curvature-200: 20px;
+  --edges-curvature-300: 30px;
+  --edges-curvature-400: 40px;
+  --edges-curvature-500: 50px;
+  --edges-curvature-600: 60px;
+  --edges-curvature-700: 70px;
+  --edges-curvature-800: 80px;
+  --edges-curvature-900: 90px;
 
   // EFFECTS
   --effects-blur-100: 1px;
@@ -42,31 +42,31 @@
   // MEASURES
   --measures-page-width: 80vw;
   --measures-header-height: 50px;
-  --measures-header-width: 600px;
+  --measures-header-width: 400px;
 }
 
 .light-mode {
-  --colors-neutral-100: #EAECEE;
-  --colors-neutral-200: #D5D8DC;
-  --colors-neutral-400: #808B96;
-  --colors-neutral-300: #ABB2B9;
+  --colors-neutral-100: #eaecee;
+  --colors-neutral-200: #d5d8dc;
+  --colors-neutral-400: #808b96;
+  --colors-neutral-300: #abb2b9;
   --colors-neutral-500: #566573;
-  --colors-neutral-600: #2C3E50;
+  --colors-neutral-600: #2c3e50;
   --colors-neutral-700: #273746;
-  --colors-neutral-800: #1C2833;
-  --colors-neutral-900: #17202A;
+  --colors-neutral-800: #1c2833;
+  --colors-neutral-900: #17202a;
 }
 
 .dark-mode {
-  --colors-neutral-900: #EAECEE;
-  --colors-neutral-800: #D5D8DC;
-  --colors-neutral-700: #808B96;
-  --colors-neutral-600: #ABB2B9;
+  --colors-neutral-900: #eaecee;
+  --colors-neutral-800: #d5d8dc;
+  --colors-neutral-700: #808b96;
+  --colors-neutral-600: #abb2b9;
   --colors-neutral-500: #566573;
-  --colors-neutral-400: #2C3E50;
+  --colors-neutral-400: #2c3e50;
   --colors-neutral-300: #273746;
-  --colors-neutral-200: #1C2833;
-  --colors-neutral-100: #17202A;
+  --colors-neutral-200: #1c2833;
+  --colors-neutral-100: #17202a;
 }
 
 * {
@@ -131,4 +131,8 @@ button {
 
 button:hover {
   color: var(--colors-neutral-300);
+}
+
+.no-scroll {
+  overflow-y: hidden;
 }

@@ -1,15 +1,28 @@
-import { A } from 'solid-start';
-import { FaSolidPlus } from 'solid-icons/fa';
-import { createSignal } from 'solid-js';
-import styles from './Navbar.module.scss';
-import { t } from '~/helpers/translate';
-import { useApplicationContext } from '~/context/context';
+import { A } from "solid-start";
+import { FaSolidPlus } from "solid-icons/fa";
+import { createEffect, createSignal } from "solid-js";
+import styles from "./Navbar.module.scss";
+import { t } from "~/helpers/translate";
+import { useApplicationContext } from "~/context/context";
+import { Body } from "solid-start";
+import solid from "solid-start";
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = createSignal(false);
   const store = useApplicationContext();
+  const [menuOpen, { setMenuOpen }] = store.menuOpen;
   const [theme, { changeTheme }] = store.theme;
   const [language, { changeLanguage }] = store.language;
+
+  createEffect(() => {
+    const body = document.getElementById("body");
+    if (body) {
+      if (menuOpen()) {
+        body.style.overflowY = "hidden";
+      } else {
+        body.style.overflowY = "scroll";
+      }
+    }
+  });
 
   return (
     <>
@@ -18,7 +31,7 @@ export default function Navbar() {
           <ul>
             <li>
               <A href="/home" class={styles.link} activeClass={styles.active}>
-                {t('logo')}
+                {t("logo")}
               </A>
             </li>
             <li>
@@ -27,7 +40,7 @@ export default function Navbar() {
                 class={styles.link}
                 activeClass={styles.active}
               >
-                {t('timeline')}
+                {t("timeline")}
               </A>
             </li>
           </ul>
@@ -36,12 +49,12 @@ export default function Navbar() {
           <FaSolidPlus onClick={() => setMenuOpen(!menuOpen())} />
           <div class={`${menuOpen() ? styles.open_menu : styles.close_menu}`}>
             <div class={styles.card}>
-              <button onClick={() => changeLanguage('es')}>ES</button>
-              <button onClick={() => changeLanguage('en')}>EN</button>
+              <button onClick={() => changeLanguage("es")}>ES</button>
+              <button onClick={() => changeLanguage("en")}>EN</button>
             </div>
             <div class={styles.card}>
-              <button onClick={() => changeTheme('dark')}>dark</button>
-              <button onClick={() => changeTheme('light')}>light</button>
+              <button onClick={() => changeTheme("dark")}>dark</button>
+              <button onClick={() => changeTheme("light")}>light</button>
             </div>
           </div>
         </div>

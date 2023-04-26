@@ -1,4 +1,4 @@
-import { JSX, createContext, createSignal, useContext } from 'solid-js';
+import { JSX, createContext, createSignal, useContext } from "solid-js";
 
 interface ApplicationProviderProps {
   children: JSX.Element;
@@ -7,8 +7,9 @@ interface ApplicationProviderProps {
 const ApplicationContext = createContext();
 
 export function ApplicationProvider(props: ApplicationProviderProps) {
-  const [theme, setTheme] = createSignal<string>('dark');
-  const [language, setLanguage] = createSignal<string>('es');
+  const [theme, setTheme] = createSignal<string>("dark");
+  const [language, setLanguage] = createSignal<string>("es");
+  const [menuOpen, setMenuOpen] = createSignal(false);
 
   const store = {
     theme: [
@@ -24,6 +25,14 @@ export function ApplicationProvider(props: ApplicationProviderProps) {
       {
         changeLanguage(language: string) {
           setLanguage(() => language);
+        },
+      },
+    ],
+    menuOpen: [
+      menuOpen,
+      {
+        setMenuOpen(state: boolean) {
+          setMenuOpen(() => state);
         },
       },
     ],
