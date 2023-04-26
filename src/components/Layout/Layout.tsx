@@ -1,5 +1,6 @@
 import Footer from '../Footer/Footer';
 import { JSXElement } from 'solid-js';
+import Loader from '../Loader/Loader';
 import Navbar from '../Navbar/Navbar';
 import Sidebar from '../Sidebar/Sidebar';
 import ToTop from '../ToTop/ToTop';
@@ -21,6 +22,7 @@ export default function Layout({ children }: SectionProps) {
         styles.layout
       }`}
     >
+      <Loader />
       <Navbar />
       <ToTop />
       <Sidebar />

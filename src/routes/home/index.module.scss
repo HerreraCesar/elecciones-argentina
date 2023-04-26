@@ -13,13 +13,13 @@
 
 .title {
   @include text(2rem, 700);
-  color: var(--text);
+  color: var(--colors-neutral-900);
   font-style: italic;
 }
 
 .card {
   @include size();
   @include flex(column, center, center, 0);
-  backdrop-filter: blur(var(--blur));
+  backdrop-filter: blur(var(--effects-blur-500));
   z-index: 5;
 }

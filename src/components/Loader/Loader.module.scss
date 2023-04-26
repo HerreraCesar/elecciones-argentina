@@ -8,7 +8,7 @@
 }
 
 .background {
-    background-color: var(--background-color);
+    background-color: var(--colors-neutral-100);
     width: 100vw;
     height: 100vh;
     z-index: 98;
@@ -23,13 +23,13 @@
     z-index: 99;
     width: 100px;
     height: 100px;
-    background-color: var(--tertiary);
+    background-color: var(--colors-neutral-800);
     position: absolute;
     top: -100px;
     left: calc(50vw - 50px);
     animation: dance 4s backwards infinite;
     transform: rotate(0);
-    box-shadow: 0rem 0rem 30rem var(--primary);
+    box-shadow: 0rem 0rem 30rem var(--colors-neutral-100);
 }
 
 @keyframes dance {

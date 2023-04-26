@@ -1,7 +1,7 @@
 @import "../../mixins.scss";
 
 .container {
-  border-radius: var(--curve);
+  border-radius: var(--edges-curvature-500);
   height: 150px;
   width: 50px;
   position: fixed;
