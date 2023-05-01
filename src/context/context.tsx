@@ -10,6 +10,7 @@ export function ApplicationProvider(props: ApplicationProviderProps) {
   const [theme, setTheme] = createSignal<string>("dark");
   const [language, setLanguage] = createSignal<string>("es");
   const [menuOpen, setMenuOpen] = createSignal(false);
+  const [showAccesories, setShowAccesories] = createSignal(false);
 
   const store = {
     theme: [
@@ -33,6 +34,14 @@ export function ApplicationProvider(props: ApplicationProviderProps) {
       {
         setMenuOpen(state: boolean) {
           setMenuOpen(() => state);
+        },
+      },
+    ],
+    showAccesories: [
+      showAccesories,
+      {
+        setShowAccesories(state: boolean) {
+          setShowAccesories(() => state);
         },
       },
     ],

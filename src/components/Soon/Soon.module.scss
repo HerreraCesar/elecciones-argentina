@@ -1,0 +1,27 @@
+@import "../../mixins.scss";
+
+.section {
+  @include size(initial, calc(var(--vh) - var(--measures-footer-height)));
+  @include flex(column, center, center, 0);
+}
+
+.card {
+  @include size();
+  @include flex(column, center, center, 6px);
+  z-index: 5;
+}
+
+.title {
+  @include text(2rem, 700);
+  color: var(--colors-neutral-900);
+  font-style: italic;
+}
+
+.link {
+  font-weight: 400;
+  color: var(--colors-neutral-700);
+  &:hover {
+    text-decoration: underline;
+    color: rgb(106, 138, 225);
+  }
+}

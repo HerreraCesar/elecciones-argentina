@@ -1,15 +1,16 @@
 @import "../../mixins.scss";
 
 .layout {
-  min-width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: space-between;
+  min-width: 100%;
+  min-height: 100%;
+  @include flex(column, center, center, 0);
   background-color: var(--colors-neutral-200);
   position: relative;
+  transition: all 0.3s ease-in-out;
 }
 
 .main {
+  min-width: 100%;
+  min-height: 100%;
+  @include flex(column, space-between, center, 0);
 }

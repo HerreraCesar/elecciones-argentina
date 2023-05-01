@@ -41,15 +41,19 @@
 
   // MEASURES
   --measures-page-width: 80vw;
-  --measures-header-height: 50px;
-  --measures-header-width: 400px;
+  --measures-header-height: 60px;
+  --measures-header-width: 90vw;
+  --measures-footer-height: 110px;
+  --measures-footer-width: 90vw;
+  --vh: 100vh;
 }
 
 .light-mode {
+  --colors-neutral-000: #bfc1c5;
   --colors-neutral-100: #eaecee;
   --colors-neutral-200: #d5d8dc;
-  --colors-neutral-400: #808b96;
   --colors-neutral-300: #abb2b9;
+  --colors-neutral-400: #808b96;
   --colors-neutral-500: #566573;
   --colors-neutral-600: #2c3e50;
   --colors-neutral-700: #273746;
@@ -58,6 +62,7 @@
 }
 
 .dark-mode {
+  --colors-neutral-000: #0e141a;
   --colors-neutral-900: #eaecee;
   --colors-neutral-800: #d5d8dc;
   --colors-neutral-700: #808b96;
@@ -76,7 +81,6 @@
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: var(--colors-neutral-500);
-  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 *::-webkit-scrollbar {
@@ -120,6 +124,10 @@ li {
   text-align: start;
   text-decoration: none;
   list-style: none;
+}
+
+a:hover {
+  color: var(--colors-neutral-500);
 }
 
 button {

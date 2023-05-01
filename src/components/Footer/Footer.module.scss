@@ -1,0 +1,35 @@
+@import "../../mixins.scss";
+
+.footer {
+  @include flex(column, center, center, 1rem);
+  height: var(--measures-footer-height);
+  width: var(--measures-footer-width);
+  border-top-left-radius: var(--edges-curvature-200);
+  border-top-right-radius: var(--edges-curvature-200);
+  background-color: var(--colors-neutral-100);
+  max-width: 800px;
+}
+
+.icons {
+  @include flex(row, center, center, 20px);
+  a {
+    @include size(20px, 20px);
+    svg {
+      @include size();
+    }
+  }
+}
+
+.author {
+  @include flex(row, center, center, 6px);
+  @include text(0.8rem, 300, center);
+  color: var(--colors-neutral-700);
+  a {
+    font-size: inherit;
+    color: var(--colors-neutral-800);
+    &:hover {
+      text-decoration: underline;
+      color: rgb(106, 138, 225);
+    }
+  }
+}

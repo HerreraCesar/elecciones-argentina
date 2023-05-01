@@ -1,40 +1,49 @@
 @import "../../mixins.scss";
 
 .container {
-  border-radius: var(--edges-curvature-500);
-  height: 150px;
-  width: 50px;
+  @include flex(column, center, center, 10px);
   position: fixed;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  left: 0;
-  top: calc(50vh - 50px);
+  left: 20px;
+  top: calc(50% - 70px);
 
   button {
-    width: 30px;
-    height: 30px;
-    transition: none;
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s;
 
     svg {
       width: 100%;
       height: 100%;
       color: inherit;
-      transition: none;
-
-      path {
-        transition: none;
-      }
     }
 
     &:nth-of-type(1) {
       transform: scale(0.7);
+      &:hover {
+        transform: scale(0.7) translateY(-10px);
+        color: var(--colors-neutral-900);
+      }
+    }
+
+    &:nth-of-type(2) {
+      &:hover {
+        transform: scale(1.15);
+        color: var(--colors-neutral-900);
+      }
     }
 
     &:nth-of-type(3) {
       transform: scale(0.7) rotate(180deg);
+      &:hover {
+        transform: scale(0.7) rotate(180deg) translateY(-10px);
+        color: var(--colors-neutral-900);
+      }
     }
+  }
+
+  @media screen and (max-aspect-ratio: 10/8) {
+    left: calc(50% - 70px);
+    top: calc(100% - 80px);
+    flex-direction: row;
   }
 }

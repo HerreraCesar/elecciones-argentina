@@ -4,8 +4,7 @@ import { createEffect, createSignal } from "solid-js";
 import styles from "./Navbar.module.scss";
 import { t } from "~/helpers/translate";
 import { useApplicationContext } from "~/context/context";
-import { Body } from "solid-start";
-import solid from "solid-start";
+import { FaSolidArrowRightLong } from "solid-icons/fa";
 
 export default function Navbar() {
   const store = useApplicationContext();
@@ -45,17 +44,65 @@ export default function Navbar() {
             </li>
           </ul>
         </nav>
-        <div class={`${menuOpen() ? styles.touched_button : styles.button}`}>
-          <FaSolidPlus onClick={() => setMenuOpen(!menuOpen())} />
-          <div class={`${menuOpen() ? styles.open_menu : styles.close_menu}`}>
-            <div class={styles.card}>
-              <button onClick={() => changeLanguage("es")}>ES</button>
-              <button onClick={() => changeLanguage("en")}>EN</button>
-            </div>
-            <div class={styles.card}>
-              <button onClick={() => changeTheme("dark")}>dark</button>
-              <button onClick={() => changeTheme("light")}>light</button>
-            </div>
+        <div
+          class={`${menuOpen() ? styles.touched_button : styles.button}`}
+          onClick={() => setMenuOpen(!menuOpen())}
+        >
+          <FaSolidPlus class={styles.icon} />
+        </div>
+        <div class={`${menuOpen() && styles.open} ${styles.menu}`}>
+          <div class={styles.card}>
+            <A
+              href="/timeline"
+              class={styles.link}
+              onClick={() => setMenuOpen(!menuOpen())}
+            >
+              <span>
+                {t("timeline")} <FaSolidArrowRightLong />
+              </span>
+            </A>
+          </div>
+          <div class={styles.card}>
+            <span>{t("spanish")}</span>
+            <label class={styles.switch}>
+              <input
+                class={styles.input}
+                type="checkbox"
+                checked={language() === "en" && true}
+                onclick={() =>
+                  changeLanguage(language() === "es" ? "en" : "es")
+                }
+              />
+              <div class={styles.slider} />
+            </label>
+            <span>{t("english")}</span>
+          </div>
+          <div class={styles.card}>
+            <span>{t("dark")}</span>
+            <label class={styles.switch}>
+              <input
+                class={styles.input}
+                type="checkbox"
+                checked={theme() === "light" && true}
+                onclick={() =>
+                  changeTheme(theme() === "dark" ? "light" : "dark")
+                }
+              />
+              <div class={styles.slider} />
+            </label>
+            <span>{t("light")}</span>
+          </div>
+          <div class={styles.card}>
+            <A
+              href="/contact"
+              class={styles.link}
+              onClick={() => setMenuOpen(false)}
+            >
+              <span>
+                {t("contact")}
+                <FaSolidArrowRightLong />
+              </span>
+            </A>
           </div>
         </div>
       </header>

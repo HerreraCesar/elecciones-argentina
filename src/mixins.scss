@@ -24,27 +24,3 @@
 }
 
 //@include size(80%, 80%, 0, 0);
-
-/* @mixin section($color: rgba(0, 0, 0, 0.5)) {
-  @include size(100%, 100%, $navBarHeight 0 0, 0);
-  @include flex(column, center, center, 0);
-  background: $color;
-  min-height: 100vh;
-  min-width: 100vw;
-  overflow: hidden;
-} */
-
-//@include section();
-
-/* @mixin card($width: 100px, $height: 100px) {
-  @include size($width, $height, 0, 0);
-  @include flex(column, center, center, 0);
-  border-radius: $curve;
-  background-color: $glass;
-  border: solid 1px $border;
-  backdrop-filter: blur($blur);
-  box-shadow: 0px 0px 20rem $shadow;
-  z-index: 5;
-} */
-
-//@include card();

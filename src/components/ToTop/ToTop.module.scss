@@ -2,9 +2,9 @@
 
 .button {
   margin-right: 50px;
-  margin-top: calc(100vh + 80px);
+  margin-top: calc(100vh + 75px);
   position: sticky;
-  top: calc(100vh - 80px);
+  top: calc(100% - 75px);
   width: 30px;
   height: 30px;
   z-index: 50;
@@ -17,6 +17,7 @@
 
   &:hover {
     transform: rotateY(360deg);
+    color: var(--colors-neutral-900);
   }
 }
 
