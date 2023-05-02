@@ -1,104 +1,68 @@
 @import "../../mixins.scss";
 
 .card {
-  gap: 4rem;
+  @include size(initial, calc(var(--vh) - var(--measures-footer-height)));
+  @include flex(column, center, center, 2rem);
+}
 
-  h3 {
-    @include text(2.4rem, 400, center);
+.title {
+  @include text(1.2rem, 400, center);
+  @include flex(row, center, center, 10px);
+  color: var(--colors-neutral-800);
+
+  @media screen and (max-aspect-ratio: 10/8) {
+    font-size: 1rem;
   }
 
-  .email {
-    @include flex(row, center, center, 2rem);
-    cursor: pointer;
-
-    h2 {
-      @include text(4.8rem, 500, center);
-    }
-
-    .copy {
-      position: relative;
-      transition: all 0.5s;
-
-      svg {
-        font-size: 4rem;
-        color: var(--colors-neutral-900);
-      }
-
-      &::after {
-        content: "copy";
-        border-radius: var(--edges-curvature-300);
-        background-color: var(--colors-neutral-300);
-        color: var(--colors-neutral-600);
-        font-size: 2rem;
-        padding: 0.8rem 1rem;
-        position: absolute;
-        top: -130%;
-        left: -1rem;
-        opacity: 0;
-        transition: all 0.3s ease-in-out;
-      }
-    }
-
-    &:active {
-      transform: scale(0.95);
-    }
-
-    &:hover .copy::after {
-      opacity: 1;
-    }
-
-    &:hover h2,
-    &:hover .copy > svg {
-      color: var(--colors-neutral-200);
-    }
+  @media screen and (max-aspect-ratio: 10/14) {
+    font-size: 0.9rem;
   }
 }
 
-/* @media screen and (max-aspect-ratio: 10/8) {
-  #contact {
-    .card {
-      padding-top: 3rem;
-      padding-bottom: 8rem;
-      height: calc(80vh - 8rem);
+.email {
+  @include flex(row, center, center, 20px);
+  cursor: pointer;
 
-      h3 {
-        font-size: 2.2rem;
-        width: 80%;
-      }
+  h2 {
+    @include text(3rem, 500, center);
 
-      .email {
-        gap: 1rem;
-
-        h2 {
-          font-size: 1.8rem;
-        }
-
-        .copy {
-          svg {
-            font-size: 2rem;
-          }
-
-          &::after {
-            display: none;
-          }
-        }
-      }
-
-      .networks {
-        div a svg {
-          font-size: 3rem;
-        }
-      }
-
-      .copyright {
-        width: 80%;
-        text-align: center;
-        font-size: 1.2rem;
-      }
+    @media screen and (max-aspect-ratio: 10/8) {
+      font-size: 2rem;
     }
 
-    .backgroundTitle {
-      font-size: 35vw;
+    @media screen and (max-aspect-ratio: 10/14) {
+      font-size: 1.5rem;
     }
   }
-} */
+
+  .copy {
+    position: relative;
+    transition: all 0.5s;
+
+    svg {
+      font-size: 3rem;
+
+      @media screen and (max-aspect-ratio: 10/8) {
+        font-size: 2rem;
+      }
+
+      @media screen and (max-aspect-ratio: 10/14) {
+        font-size: 1.2rem;
+      }
+
+      path {
+
+        color: var(--colors-neutral-900);
+      }
+    }
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &:hover h2,
+  &:hover .copy>svg>path {
+    color: var(--colors-neutral-500);
+  }
+}

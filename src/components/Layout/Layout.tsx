@@ -1,10 +1,11 @@
-import Footer from "../Footer/Footer";
-import { JSXElement, Show, createEffect, createSignal } from "solid-js";
-import Navbar from "../Navbar/Navbar";
-import ToTop from "../ToTop/ToTop";
-import { Toaster } from "solid-toast";
-import styles from "./Layout.module.scss";
-import { useApplicationContext } from "~/context/context";
+import { JSXElement, Show, createEffect, createSignal } from 'solid-js';
+
+import Footer from '../Footer/Footer';
+import Navbar from '../Navbar/Navbar';
+import ToTop from '../ToTop/ToTop';
+import { Toaster } from 'solid-toast';
+import styles from './Layout.module.scss';
+import { useApplicationContext } from '~/context/context';
 
 interface SectionProps {
   children: JSXElement;
@@ -16,7 +17,7 @@ export default function Layout({ children }: SectionProps) {
   const [showAccesories, { setShowAccesories }] = store.showAccesories;
 
   createEffect(() => {
-    const body = document.getElementById("body");
+    const body = document.getElementById('body');
     if (body) {
       setShowAccesories(body.clientHeight > window.innerHeight * 1.1);
     } else {
@@ -27,7 +28,7 @@ export default function Layout({ children }: SectionProps) {
   return (
     <div
       class={`
-        ${theme() === "dark" ? "dark-mode" : "light-mode"}
+        ${theme() === 'dark' ? 'dark-mode' : 'light-mode'}
         ${styles.layout} 
       `}
     >
@@ -36,7 +37,19 @@ export default function Layout({ children }: SectionProps) {
         <ToTop />
       </Show>
       <main class={styles.main}>{children}</main>
-      <Toaster position="bottom-center" />
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          duration: 5000,
+          style: {
+            'font-family': 'var(--font)',
+            'font-size': '0.9rem',
+            'border-radius': 'var(--edges-curvature-100)',
+            background: 'var(--colors-neutral-300)',
+            color: 'var(--colors-neutral-800)',
+          },
+        }}
+      />
     </div>
   );
 }
