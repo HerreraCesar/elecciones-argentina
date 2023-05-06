@@ -9,7 +9,9 @@ export const t = (key: string) => {
   switch (language()) {
     case 'en':
       return en[key];
-    default:
+    case 'es':
       return es[key];
+    default:
+      return key;
   }
 };

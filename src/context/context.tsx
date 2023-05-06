@@ -1,4 +1,4 @@
-import { JSX, createContext, createSignal, useContext } from "solid-js";
+import { JSX, createContext, createSignal, useContext } from 'solid-js';
 
 interface ApplicationProviderProps {
   children: JSX.Element;
@@ -7,10 +7,11 @@ interface ApplicationProviderProps {
 const ApplicationContext = createContext();
 
 export function ApplicationProvider(props: ApplicationProviderProps) {
-  const [theme, setTheme] = createSignal<string>("dark");
-  const [language, setLanguage] = createSignal<string>("es");
+  const [theme, setTheme] = createSignal<string>('dark');
+  const [language, setLanguage] = createSignal<string>('es');
   const [menuOpen, setMenuOpen] = createSignal(false);
   const [showAccesories, setShowAccesories] = createSignal(false);
+  const [elements, setElements] = createSignal<Element[]>([]);
 
   const store = {
     theme: [
@@ -42,6 +43,14 @@ export function ApplicationProvider(props: ApplicationProviderProps) {
       {
         setShowAccesories(state: boolean) {
           setShowAccesories(() => state);
+        },
+      },
+    ],
+    elements: [
+      elements,
+      {
+        addElement(payload: Element) {
+          setElements((prev) => [...prev, payload]);
         },
       },
     ],

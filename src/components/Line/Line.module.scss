@@ -1,0 +1,23 @@
+@import "../../mixins.scss";
+
+.line {
+    margin: 10px 0;
+    position: relative;
+    width: 4px;
+    background-color: var(--colors-neutral-500);
+    border-radius: var(--edges-curvature-100);
+}
+
+.today {
+    position: absolute;
+    padding: 20px;
+    border-radius: var(--edges-curvature-900);
+    background-color: var(--colors-neutral-800);
+    transform: translateX(-50%) translateY(-50%);
+    @include flex(column, center, center, 0);
+
+    span {
+        color: var(--colors-neutral-200);
+        @include text(0.9rem, 800, center);
+    }
+}

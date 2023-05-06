@@ -20,7 +20,12 @@ const footer = {
   author: 'Sitio web realizado por',
 };
 
-const timeline = {};
+const timeline = {
+  functionality_soon:
+    'Funcionalidad en construcción, vuelve a intentarlo más tarde',
+  timeline_title: 'Calendario electoral',
+  source: 'Fuente:',
+};
 
 const contact = {
   title: '¿Tienes alguna pregunta o sugerencia?',

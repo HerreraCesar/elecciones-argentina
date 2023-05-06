@@ -3,6 +3,7 @@ import { FaSolidCircleChevronUp } from 'solid-icons/fa';
 import { IoToday } from 'solid-icons/io';
 import styles from './Sidebar.module.scss';
 import { t } from '~/helpers/translate';
+import toast from 'solid-toast';
 import { useApplicationContext } from '~/context/context';
 
 export default function Sidebar() {
@@ -12,13 +13,13 @@ export default function Sidebar() {
 
   return (
     <div class={styles.container}>
-      <button>
+      <button onClick={() => toast(() => t('functionality_soon'))}>
         <FaSolidCircleChevronUp />
       </button>
-      <button>
+      <button onClick={() => toast(() => t('functionality_soon'))}>
         <IoToday />
       </button>
-      <button>
+      <button onClick={() => toast(() => t('functionality_soon'))}>
         <FaSolidCircleChevronUp />
       </button>
     </div>

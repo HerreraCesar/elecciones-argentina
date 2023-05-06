@@ -20,7 +20,11 @@ const footer = {
   author: 'Website made by',
 };
 
-const timeline = {};
+const timeline = {
+  functionality_soon: 'Functionality in construction, try again later',
+  timeline_title: 'Electoral schedule',
+  source: 'Source:',
+};
 
 const contact = {
   title: 'Do you have a question or suggestion?',

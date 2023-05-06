@@ -1,5 +1,14 @@
 @import "../../mixins.scss";
 
+.container {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
 .button {
   margin-right: 50px;
   margin-top: calc(100vh + 75px);
@@ -19,13 +28,4 @@
     transform: rotateY(360deg);
     color: var(--colors-neutral-900);
   }
-}
-
-.container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
 }
