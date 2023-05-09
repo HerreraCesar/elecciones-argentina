@@ -38,6 +38,7 @@ export default function Navbar() {
                 href="/timeline"
                 class={styles.link}
                 activeClass={styles.active}
+                noScroll
               >
                 {t("timeline")}
               </A>

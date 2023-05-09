@@ -140,7 +140,7 @@
   border-radius: var(--edges-curvature-200);
   transition: all 0.3s;
   z-index: -1;
-  transform: translateY(30px);
+  transform: translateY(-180px);
   padding: 30px;
   @include flex(column, initial, center, 20px);
 

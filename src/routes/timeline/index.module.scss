@@ -1,26 +1,35 @@
 @import "../../mixins.scss";
 
 .section {
-    min-height: calc(var(--vh) - var(--measures-footer-height));
-    @include size(initial, initial, 150px 0 100px 0, 0);
-    @include flex(column, center, center, 0);
+  min-height: calc(var(--vh) - var(--measures-footer-height));
+  @include size(initial, initial, 150px 0 100px 0, 0);
+  @include flex(column, center, center, 0);
 }
 
 .title {
-    @include text(1.6rem, 400, center);
-    color: var(--colors-neutral-900);
-    text-transform: uppercase;
-    margin-bottom: 50px;
-    letter-spacing: 3px;
-    word-spacing: 6px;
+  @include text(1.6rem, 400, center);
+  color: var(--colors-neutral-900);
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  letter-spacing: 3px;
+  word-spacing: 6px;
 
-    @media screen and (max-aspect-ratio: 10/8) {
-        font-size: 4vw;
-    }
+  @media screen and (max-aspect-ratio: 10/8) {
+    font-size: 4vw;
+  }
 }
 
 .date {
-    font-size: 0.9rem;
-    color: var(--colors-neutral-700);
-    font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--colors-neutral-700);
+  font-weight: 400;
+}
+
+.source {
+  margin-top: 20px;
+  @include text(0.9rem, 700, center);
+  @include flex(row, center, center, 6px);
+  a {
+    @include text(0.9rem, 300, center);
+  }
 }

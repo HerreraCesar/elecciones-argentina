@@ -1,6 +1,18 @@
-import { createSignal } from 'solid-js';
-import styles from './Card.module.scss';
+import { JSXElement, createSignal } from "solid-js";
+import "./Card.scss";
 
-export default function Card() {
-  return <div class={styles.card}></div>;
+interface CardProps {
+  children?: JSXElement;
+  side: "card-right" | "card-left";
+  distance: number;
+}
+
+export default function Card({ children, side, distance }: CardProps) {
+  return (
+    <div class={`card ${side}`} style={{ "margin-top": `${distance}vh` }}>
+      <div class="card-dot" />
+      <div class="card-arrow" />
+      {children}
+    </div>
+  );
 }

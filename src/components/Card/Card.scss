@@ -1,0 +1,72 @@
+@import "../../mixins.scss";
+
+.card {
+  position: absolute;
+  padding: 10px 20px;
+  min-width: 300px;
+  min-height: 100px;
+  background-color: var(--colors-neutral-300);
+  border-radius: var(--edges-curvature-100);
+  @include flex(column, initial, initial, 0);
+}
+
+.card-right {
+  transform: translateX(40px);
+  .card-dot {
+    transform: translateX(-66px) translateY(20px);
+  }
+  .card-label {
+    transform: translateY(-180%) translateX(-20px);
+  }
+  .card-arrow {
+    transform: translateX(-27px) translateY(20px) rotateZ(45deg);
+    transform-origin: 50% 50%;
+  }
+}
+
+.card-left {
+  transform: translateX(calc(-100% - 40px));
+  .card-dot {
+    transform: translateX(314px) translateY(20px);
+  }
+  .card-label {
+    transform: translateY(-180%) translateX(193px);
+  }
+  .card-arrow {
+    transform: translateX(273px) translateY(20px) rotateZ(45deg);
+    transform-origin: 50% 50%;
+  }
+}
+
+.card-label {
+  position: absolute;
+  text-transform: uppercase;
+  @include text(0.7rem, 600, center);
+  color: var(--colors-neutral-200);
+  border-radius: var(--edges-curvature-100);
+  background-color: var(--colors-neutral-600);
+  padding: 4px 10px;
+}
+
+.card-dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: var(--colors-neutral-600);
+  border-radius: var(--edges-curvature-100);
+}
+
+.card-arrow {
+  position: absolute;
+  background-color: var(--colors-neutral-300);
+  width: 16px;
+  height: 16px;
+}
+
+.card-date {
+  @include text(0.8rem, 500, end);
+  color: var(--colors-neutral-700);
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
