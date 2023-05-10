@@ -16,6 +16,9 @@ devDependencies:
   '@types/testing-library__jest-dom':
     specifier: ^5.14.5
     version: 5.14.5
+  '@vercel/analytics':
+    specifier: ^1.0.1
+    version: 1.0.1
   '@vitest/coverage-c8':
     specifier: ^0.26.3
     version: 0.26.3(@vitest/ui@0.26.3)(jsdom@20.0.3)(sass@1.61.0)
@@ -2558,6 +2561,10 @@ packages:
 
   /@vanilla-extract/private@1.0.3:
     resolution: {integrity: sha512-17kVyLq3ePTKOkveHxXuIJZtGYs+cSoev7BlP+Lf4916qfDhk/HBjvlYDe8egrea7LNPHKwSZJK/bzZC+Q6AwQ==}
+    dev: true
+
+  /@vercel/analytics@1.0.1:
+    resolution: {integrity: sha512-Ux0c9qUfkcPqng3vrR0GTrlQdqNJ2JREn/2ydrVuKwM3RtMfF2mWX31Ijqo1opSjNAq6rK76PwtANw6kl6TAow==}
     dev: true
 
   /@vercel/build-utils@6.7.1:
