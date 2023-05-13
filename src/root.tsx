@@ -1,4 +1,4 @@
-import "./root.scss";
+import './root.scss';
 
 import {
   Body,
@@ -9,12 +9,12 @@ import {
   Meta,
   Scripts,
   Title,
-} from "solid-start";
+} from 'solid-start';
 
-import { ApplicationProvider } from "./context/context";
-import { ErrorBoundary } from "solid-start/error-boundary";
-import { Routes } from "solid-start";
-import { Suspense } from "solid-js";
+import { ApplicationProvider } from './context/context';
+import { ErrorBoundary } from 'solid-start/error-boundary';
+import { Routes } from 'solid-start';
+import { Suspense } from 'solid-js';
 
 export default function Root() {
   return (

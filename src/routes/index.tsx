@@ -1,5 +1,7 @@
-import { Navigate } from "solid-start";
+import { Navigate } from 'solid-start';
+import { inject } from '@vercel/analytics';
 
 export default function Index() {
-  return <Navigate href={"/home"} />;
+  inject();
+  return <Navigate href={'/home'} />;
 }
